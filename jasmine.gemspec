@@ -71,4 +71,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'rspec', '>= 1.3.1'
   s.add_dependency 'selenium-webdriver', '>= 0.1.3'
   s.add_dependency 'sprockets'
+  # phantomjs
+  s.add_dependency "multi_json",     "~> 1.0"
+  s.add_dependency "http_parser.rb", "~> 0.5.3"
+  s.add_dependency "faye-websocket", "~> 0.4", ">= 0.4.4"
 end
