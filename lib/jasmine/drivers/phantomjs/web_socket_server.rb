@@ -72,6 +72,7 @@ module Jasmine::Drivers
         time = Time.now
 
         begin
+          raise port.inspect
           TCPServer.open(port)
         rescue Errno::EADDRINUSE
           if (Time.now - time) < BIND_TIMEOUT
