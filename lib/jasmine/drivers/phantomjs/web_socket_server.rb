@@ -62,7 +62,7 @@ module Jasmine::Drivers
       attr_accessor :timeout
 
       def initialize(port, timeout = nil)
-        @port    = 8889
+        @port    = port
         @parser  = Http::Parser.new
         @server  = start_server
         @timeout = timeout
