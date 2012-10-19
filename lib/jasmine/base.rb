@@ -13,6 +13,7 @@ module Jasmine
   end
 
   def self.find_unused_port
+    puts "!!! finding unused port"
     socket = open_socket_on_unused_port
     port = socket.addr[1]
     socket.close

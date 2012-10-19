@@ -62,6 +62,7 @@ module Jasmine::Drivers
       attr_accessor :timeout
 
       def initialize(port, timeout = nil)
+        puts "initialize: #{port}"
         @port    = port
         @parser  = Http::Parser.new
         @server  = start_server
@@ -72,6 +73,7 @@ module Jasmine::Drivers
         time = Time.now
 
         begin
+          puts "start_server: #{port.inspect}"
           TCPServer.open(port)
         rescue Errno::EADDRINUSE
           if (Time.now - time) < BIND_TIMEOUT

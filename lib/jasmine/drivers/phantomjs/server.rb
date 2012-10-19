@@ -7,6 +7,7 @@ module Jasmine::Drivers
       def initialize(timeout = nil)
         server = TCPServer.new('127.0.0.1', 0)
         @port    = server.addr[1]
+        puts "Phantomjs::Server.port: #{@port}"
         @timeout = timeout
         start
       ensure
